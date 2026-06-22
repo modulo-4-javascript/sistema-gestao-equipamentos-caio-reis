@@ -1,4 +1,5 @@
 import type { Equipaments } from "../../types/equipament.types";
+import EquipamentCard from "../EquipamentCard";
 import "./index.css";
 
 interface EquipamentListProps {
@@ -8,14 +9,9 @@ interface EquipamentListProps {
 function EquipamentList({equipaments}: EquipamentListProps) {
   return (
     <div>
-        <h2>Equipament List</h2>
-        <ul>
-            {equipaments.map((equipament) => (
-                <li key={equipament.id}>
-                    {equipament.name} - {equipament.status ? "Disponível" : "Indisponível"}
-                </li>
-            ))}
-        </ul>
+        {equipaments.map((equipament) => (
+            <EquipamentCard key={equipament.id} equipament={equipament} />
+        ))}
     </div>
   )
 }

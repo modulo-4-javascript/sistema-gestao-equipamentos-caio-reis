@@ -7,7 +7,7 @@ interface EquipamentsCardProps {
 
 function EquipamentCard({equipament}: EquipamentsCardProps) {
   return (
-    <div>
+    <div className={`equipament-card ${equipament.status ? "available" : "unavailable"}`}>
         <h3>{equipament.name}</h3>
         <p>Status: {equipament.status ? "Disponível" : "Indisponível"}</p>
     </div>

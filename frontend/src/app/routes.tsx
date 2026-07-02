@@ -1,7 +1,7 @@
 import { Navigate, Route, Routes } from 'react-router-dom'
 // AULA 06:
 // Vamos ativar esta página quando criarmos a rota dinâmica de detalhes.
-// import { EquipmentDetailsPage } from '../features/equipment/pages/EquipmentDetailsPage'
+import { EquipmentDetailsPage } from '../features/equipment/pages/EquipmentDetailsPage'
 import { EquipmentPage } from '../features/equipment/pages/EquipmentPage'
 import { LocationsPage } from '../features/locations/pages/LocationsPage'
 
@@ -15,7 +15,7 @@ export function AppRoutes() {
       <Route path="/equipment" element={<EquipmentPage />} />
 
       {/* AULA 06: rota dinâmica da tela de detalhes de um equipamento */}
-      {/* <Route path="/equipment/:equipmentId" element={<EquipmentDetailsPage />} /> */}
+      <Route path="/equipment/:equipmentId" element={<EquipmentDetailsPage />} />
 
       {/* Esta rota mostra que o layout pode ser compartilhado por mais de uma página */}
       <Route path="/locations" element={<LocationsPage />} />

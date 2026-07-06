@@ -3,6 +3,7 @@ import { Navigate, Route, Routes } from 'react-router-dom'
 // Vamos ativar esta página quando criarmos a rota dinâmica de detalhes.
 import { EquipmentDetailsPage } from '../features/equipment/pages/EquipmentDetailsPage'
 import { EquipmentPage } from '../features/equipment/pages/EquipmentPage'
+import { LocationDetailsPage } from '../features/locations/pages/LocationDetailsPage'
 import { LocationsPage } from '../features/locations/pages/LocationsPage'
 
 export function AppRoutes() {
@@ -22,6 +23,8 @@ export function AppRoutes() {
 
       {/* Qualquer rota desconhecida volta para a tela principal para evitar tela em branco. */}
       <Route path="*" element={<Navigate to="/equipment" replace />} />
+
+      <Route path="/locations/:locationId" element={<LocationDetailsPage />} />
     </Routes>
   )
 }
